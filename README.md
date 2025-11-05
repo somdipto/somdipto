@@ -1,5 +1,5 @@
 # 💫 About Me:
-building Ai-agents 🧠 ✦ product builder👷🏻 ✦ Ai at scale ✦ stealth strtp ✦ Web & Design Lead at TEDXAtria IT 🖌️<br>
+building DAN labs (ai product and research lab) also simplifying Ai-agents 🧠 ✦ product builder👷🏻 ✦ Ai at scale ✦ stealth strtp ✦ Web & Design Lead at TEDXAtria IT 🖌️<br>
 
 
 ## 🌐 Socials:
