@@ -24,29 +24,18 @@ export default function HomeScreen() {
     createThread(text);
   };
 
+  const openBrowser = () => {
+    navigation.navigate('Browser', {});
+  };
+
   useEffect(() => {
     if (activeThreadId) {
-      // When a new thread is created (and becomes active), navigate to it
-      // We need to reset activeThreadId in the store or handle it such that we don't double nav
-      // But for now, let's just navigate.
-      // Better approach: createThread returns the ID, but our store is void.
-      // So we listen to activeThreadId change.
-      // Wait, this will trigger on every render if we don't clear it or check if we are already there.
-      // Actually, createThread updates the store. We can just use the ID.
-      // But simpler: just navigate in the handler if we modify createThread to return ID,
-      // OR, createThread is synchronous. So we can grab the ID from store immediately after?
-      // Zustand set is synchronous.
       const state = useStore.getState();
       if (state.activeThreadId) {
         navigation.navigate('Thread', { threadId: state.activeThreadId });
-        // Optional: clear active thread so we don't auto-nav back?
-        // Ideally "activeThread" means "current open thread".
       }
     }
   }, [activeThreadId, navigation]);
-
-  // However, the above useEffect is risky because it might loop if we come back to Home and activeThreadId is still set.
-  // Let's refactor handleSearch to get the ID from the store state *after* creation.
 
   const onSubmit = () => {
     if (!query.trim()) return;
@@ -93,6 +82,15 @@ export default function HomeScreen() {
               </TouchableOpacity>
             ))}
           </View>
+        </View>
+
+        <View className="mt-8 items-center">
+          <TouchableOpacity
+            onPress={openBrowser}
+            className="bg-blue-500 rounded-full px-6 py-3"
+          >
+            <Text className="text-white font-bold">Open Browser Agent</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
