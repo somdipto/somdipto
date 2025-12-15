@@ -1,0 +1,18 @@
+npm warn Unknown env config "python". This will stop working in the next major version of npm.
+
+> perplexity-comet@1.0.0 web
+> expo start --web
+
+env: load .env
+env: export API_URL API_KEY
+Starting project at /home/engine/project/mobile
+Error: Found config at /home/engine/project/mobile/metro.config.js that could not be loaded with Node.js.
+Error: Found config at /home/engine/project/mobile/metro.config.js that could not be loaded with Node.js.
+    at loadConfigFile (/home/engine/project/mobile/node_modules/metro-config/src/loadConfig.js:263:15)
+    at resolveConfig (/home/engine/project/mobile/node_modules/metro-config/src/loadConfig.js:94:10)
+    at loadMetroConfigAsync (/home/engine/project/mobile/node_modules/expo/node_modules/@expo/cli/src/start/server/metro/instantiateMetro.ts:97:21)
+    at instantiateMetroAsync (/home/engine/project/mobile/node_modules/expo/node_modules/@expo/cli/src/start/server/metro/instantiateMetro.ts:203:7)
+    at MetroBundlerDevServer.startImplementationAsync (/home/engine/project/mobile/node_modules/expo/node_modules/@expo/cli/src/start/server/metro/MetroBundlerDevServer.ts:1054:69)
+    at MetroBundlerDevServer.startAsync (/home/engine/project/mobile/node_modules/expo/node_modules/@expo/cli/src/start/server/BundlerDevServer.ts:160:18)
+    at DevServerManager.startAsync (/home/engine/project/mobile/node_modules/expo/node_modules/@expo/cli/src/start/server/DevServerManager.ts:184:7)
+    at startAsync (/home/engine/project/mobile/node_modules/expo/node_modules/@expo/cli/src/start/startAsync.ts:100:3)
